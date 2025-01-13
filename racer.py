@@ -9,23 +9,32 @@ root.configure(bg='black')
 root.geometry("1200x600")
 root.title("<<Racer>>")
 w = StringVar(root)
-Label(root,text="HTTP_REQUEST_DOSSER",font=("Arial", 20,"bold"),fg='lime',bg='black').pack(pady=10)
+Label(root,text="[ R3QU35T R4C3R ]",font=("Arial", 20,"bold"),fg='#2832C2',bg='black').pack(pady=10)
 Label(root,text="[ URL ]",fg='white',bg='black').pack(pady=10)
-Entry(root,textvariable=w,width=100,borderwidth=2,bg='gray',fg='blue',highlightthickness=2, highlightbackground="white", highlightcolor="blue").pack()
+Entry(root,textvariable=w,width=100,borderwidth=2,bg='#03C04A',fg='blue',highlightthickness=2, highlightbackground="white", highlightcolor="blue").pack()
 
 para = StringVar()
 Label(root,text="[ PARAMETER SETTING ]",fg='white',bg='black').pack(pady=10)
-Entry(root,textvariable=para,fg='white',bg='gray',width=100,borderwidth=2,  highlightthickness=2, highlightbackground="white", highlightcolor="yellow").pack()
+Entry(root,textvariable=para,fg='red',bg='#99EDC3',width=100,borderwidth=2,  highlightthickness=2, highlightbackground="white", highlightcolor="yellow").pack()
 
 Label(root,text="[ HEADER SETTING ]",fg='white',bg='black').pack(pady=10)
+
 f1 = Frame(root)
 f1.pack()
 
 value1 = StringVar()
-Entry(f1,textvariable=value1,fg='white',bg='gray',width=29,borderwidth=2,highlightthickness=2, highlightbackground="white", highlightcolor="lime").pack(side=LEFT)
+Entry(f1,textvariable=value1,fg='white',bg='#234F1E',width=29,borderwidth=2,highlightthickness=2, highlightbackground="white", highlightcolor="black").pack(side=LEFT)
 value2 = StringVar()
-Entry(f1,textvariable=value2,fg='white',bg='gray',width=70,borderwidth=2,highlightthickness=2, highlightbackground="white", highlightcolor="lime").pack(side=LEFT)
+Entry(f1,textvariable=value2,fg='white',bg='#234F1E',width=70,borderwidth=2,highlightthickness=2, highlightbackground="white", highlightcolor="black").pack(side=LEFT)
 
+f2 = Frame(root)
+f2.pack()
+
+value3 = StringVar()
+Entry(f2,textvariable=value3,fg='white',bg='#234F1E',width=29,borderwidth=2,highlightthickness=2, highlightbackground="white", highlightcolor="black").pack(side=LEFT)
+value4 = StringVar()
+Entry(f2,textvariable=value4,fg='white',bg='#234F1E',width=70,borderwidth=2,highlightthickness=2, highlightbackground="white", highlightcolor="black").pack(side=LEFT)
+ 
 w1 = StringVar(root)
 Label(root,text="[ THREAD ]",fg='white',bg='black').pack(pady=10)
 entry = Entry(root,textvariable=w1,width=10,borderwidth=5,bg='black',fg='red',highlightthickness=2, highlightbackground="white", highlightcolor="red")
@@ -37,10 +46,15 @@ def head():
  inp3 = para.get()
  v1 = value1.get()
  v2 = value2.get()
+ v3 = value3.get()
+ v4 = value4.get()
  if v1 == '':
   headers = {"User-Agent":"Browser/5.0"}
  else:
-  headers = {v1:v2}
+  if v3 == '':
+   headers = {v1:v2}
+  else:
+   headers = {v1:v2,v3:v4}
   
  def kk(i):
   print(colored('| Thread |-|> ','red'),i+1)
@@ -56,10 +70,15 @@ def get():
  inp3 = para.get()
  v1 = value1.get()
  v2 = value2.get()
+ v3 = value3.get()
+ v4 = value4.get()
  if v1 == '':
   headers = {"User-Agent":"Browser/5.0"}
  else:
-  headers = {v1:v2}
+  if v3 == '':
+   headers = {v1:v2}
+  else:
+   headers = {v1:v2,v3:v4}
   
  def kk(i):
   print(colored('| Thread |-|> ','red'),i+1)
@@ -77,10 +96,15 @@ def post():
  inp3 = para.get()
  v1 = value1.get()
  v2 = value2.get()
- if v1 =='':
+ v3 = value3.get()
+ v4 = value4.get()
+ if v1 == '':
   headers = {"User-Agent":"Browser/5.0"}
  else:
-  headers = {v1:v2}
+  if v3 == '':
+   headers = {v1:v2}
+  else:
+   headers = {v1:v2,v3:v4}
  def kk(i):
   print(colored('| Thread |-|> ','red'),i+1)
   ab = requests.post(inp1,data=inp3,headers=headers)
@@ -95,10 +119,15 @@ def put():
  inp3 = para.get()
  v1 = value1.get()
  v2 = value2.get()
- if v1 =='':
+ v3 = value3.get()
+ v4 = value4.get()
+ if v1 == '':
   headers = {"User-Agent":"Browser/5.0"}
  else:
-  headers = {v1:v2}
+  if v3 == '':
+   headers = {v1:v2}
+  else:
+   headers = {v1:v2,v3:v4}
  def kk(i):
   print(colored('| Thread |-|> ','red'),i+1)
   ab = requests.put(inp1,data=inp3,headers=headers)
@@ -113,10 +142,15 @@ def patch():
  inp3 = para.get()
  v1 = value1.get()
  v2 = value2.get()
- if v1 =='':
+ v3 = value3.get()
+ v4 = value4.get()
+ if v1 == '':
   headers = {"User-Agent":"Browser/5.0"}
  else:
-  headers = {v1:v2}
+  if v3 == '':
+   headers = {v1:v2}
+  else:
+   headers = {v1:v2,v3:v4}
  def kk(i):
   print(colored('| Thread |-|> ','red'),i+1)
   ab = requests.patch(inp1,data=inp3,headers=headers)
@@ -131,10 +165,15 @@ def delete():
  inp3 = para.get()
  v1 = value1.get()
  v2 = value2.get()
- if v1 =='':
+ v3 = value3.get()
+ v4 = value4.get()
+ if v1 == '':
   headers = {"User-Agent":"Browser/5.0"}
  else:
-  headers = {v1:v2}
+  if v3 == '':
+   headers = {v1:v2}
+  else:
+   headers = {v1:v2,v3:v4}
  def kk(i):
   print(colored('| Thread |-|> ','red'),i+1)
   ab = requests.delete(inp1,data=inp3,headers=headers)
