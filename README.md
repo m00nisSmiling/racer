@@ -10,4 +10,5 @@ For HTTP Request Racing &amp; Request Dosing
 ### $ ./racer.py
 
 # Pov
-![Screenshot_2025-01-12_19_44_57](https://github.com/user-attachments/assets/1d404854-643e-43f1-9475-154f8bab1e5c)
+
+![Screenshot_2025-01-13_19_20_02](https://github.com/user-attachments/assets/7fadd57a-dd6c-4094-9d9d-01d4730edff5)
