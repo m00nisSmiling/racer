@@ -6,7 +6,7 @@ from termcolor import colored
 
 root = Tk()
 root.configure(bg='black')
-root.geometry("1200x600")
+root.geometry("600x700")
 root.title("<<Racer>>")
 w = StringVar(root)
 Label(root,text="[ R3QU35T R4C3R ]",font=("Arial", 20,"bold"),fg='#2832C2',bg='black').pack(pady=10)
