@@ -1,5 +1,5 @@
 # racer
-For HTTP Request Racing &amp; Request Dosing
+GUI Tool For HTTP Request Racing &amp; Request Dosing
 
 # Setup & Usage
 ### $ git clone https://github.com/m00nisSmiling/racer.git
