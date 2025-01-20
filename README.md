@@ -10,5 +10,4 @@ GUI Tool For HTTP Request Racing &amp; Request Dosing
 ### $ ./racer.py
 
 # Pov
-
-![Screenshot_2025-01-13_19_20_02](https://github.com/user-attachments/assets/7fadd57a-dd6c-4094-9d9d-01d4730edff5)
+![Screenshot_2025-01-20_12_38_27](https://github.com/user-attachments/assets/17625a30-804d-4404-85f6-9861142aa84c)
