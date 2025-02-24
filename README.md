@@ -1,7 +1,7 @@
 # racer
 #### GUI Tool For HTTP Request Racing &amp; Request Dosing
-#### racer1.py = no response display | no clean code
-#### racer.py  = showing response display | clean code
+#### racer1.py = version1 >> no response display | no clean code
+#### racer.py  = version2 >> showing response display | clean code
 
 # Setup & Usage
 ### $ git clone https://github.com/m00nisSmiling/racer.git
